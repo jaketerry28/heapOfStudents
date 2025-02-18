@@ -1,1 +1,18 @@
 # heapOfStudents
+
+## ULM Diagram
+[![](https://mermaid.ink/img/pako:eNp1U8FSwyAU_JUMXmpNfyDjxZmOelAvvTm5YN5rykwDGXg4xpp_FxJqqFAuhF2yj90HJ9YoQFax5siN2Qreat7VsnBjRxZQUnH_s9kUDwAajckwW05Yy5mYRM57TzPmx01hSAvZ-gmRMkQjaMjun9QT_Fv0C3pXfCoB57Kr24QRUtBqLl1OlcpZuPQ66fbelaBI7exujE162zmH4PDd9BmTTrDolKTDfxD48B8akOvkTL7cNWdLySte4p_Hy16FVuZ7NVGpmcDvhTb0xrtcf5x2QvlTrAtQHymIXz02hPCkOcRsaML68votUTUaQdCzstrEzoOpy7w2WTS-H5HdK0FmJQxBVQXfLdKLs_7oo4kS9xMrWYe64wLca5vyrhkd0GXEKvcJuOf2SDWr5ei2cktqN8iGVaQtlkwr2x5YtedH41a29z0Pr_UP7bl8V2pZ-2yUfg3v20_jL8DhLek?type=png)](https://mermaid.live/edit#pako:eNp1U8FSwyAU_JUMXmpNfyDjxZmOelAvvTm5YN5rykwDGXg4xpp_FxJqqFAuhF2yj90HJ9YoQFax5siN2Qreat7VsnBjRxZQUnH_s9kUDwAajckwW05Yy5mYRM57TzPmx01hSAvZ-gmRMkQjaMjun9QT_Fv0C3pXfCoB57Kr24QRUtBqLl1OlcpZuPQ66fbelaBI7exujE162zmH4PDd9BmTTrDolKTDfxD48B8akOvkTL7cNWdLySte4p_Hy16FVuZ7NVGpmcDvhTb0xrtcf5x2QvlTrAtQHymIXz02hPCkOcRsaML68votUTUaQdCzstrEzoOpy7w2WTS-H5HdK0FmJQxBVQXfLdKLs_7oo4kS9xMrWYe64wLca5vyrhkd0GXEKvcJuOf2SDWr5ei2cktqN8iGVaQtlkwr2x5YtedH41a29z0Pr_UP7bl8V2pZ-2yUfg3v20_jL8DhLek)
+
+### Student
+student init(studentString) will take entire string.
+parse string for first name and last name and assign
+convert credit hour string to int and assign
+create Date dob instance
+create Date gradDate instance
+create Address instance
+
+### Address
+
+### Date
+
+This one will need an algorithm to convert string date to formate of Month, Day, Year.
