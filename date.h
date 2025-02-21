@@ -3,6 +3,8 @@
 #ifndef DATE_H_EXISTS
 #define DATE_H_EXISTS
 
+#include <string>
+
 class Date {
 	protected:
 		std::string dateString;
@@ -13,7 +15,6 @@ class Date {
 		Date();
 		void init(std::string dateString);
 		void printDate();
-
 }; // end class def
 
 #endif
