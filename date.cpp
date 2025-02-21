@@ -12,6 +12,7 @@ Date::Date(){
 } // end constructor
 
 void Date::init(std::string dateString){
+
 	Date::dateString = dateString;
 	std::stringstream ss;
 	std::string sMonth;
@@ -23,18 +24,20 @@ void Date::init(std::string dateString){
 
 	getline(ss, sMonth, '/');
 	getline(ss, sDay, '/');
-	getline(ss, sYear);
-
-	ss << sMonth << sDay << sYear;
-	ss >> month >> day >> year;
-
-	Date::month = month;
+	getline(ss, sYear, '/');
 
 	ss.clear();
 	ss.str("");
+
+	ss << sMonth << " " << sDay << " " << sYear;
+	ss >> Date::month >> Date::day >> Date::year;
+
+	ss.clear();
+	ss.str("");
+
 } // end init
 
 void Date::printDate(){
 	std::string months[13] = {"NULL", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-	std::cout << months[month] << std::endl;
+	std::cout << months[Date::month] << " " << Date::day << ", " << Date::year << std::endl;
 } // end printDate
