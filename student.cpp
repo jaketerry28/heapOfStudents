@@ -8,9 +8,9 @@ Student::Student(){
 	studentString = "";
 	firstName = "";
 	lastName = "";
-	dob = nullptr;
-	expectedGrad = nullptr;
-	address = nullptr;
+	dob = new Date();
+	expectedGrad = new Date();
+	address = new Address();
 	creditHours = 0;
 } // end constructor
 
@@ -51,13 +51,10 @@ void Student::init(std::string studentString){
 	ss << sCreditHours;
 	ss >> creditHours;
 
-	Student::dob = new Date();
 	Student::dob->init(sBirth);
 
-	Student::expectedGrad = new Date();
 	Student::expectedGrad->init(sGrad);
 
-	Student::address = new Address();
 	Student::address->init(street, city, state, zip);
 
 } // end init
@@ -70,4 +67,12 @@ void Student::printStudent(){
 	std::cout << "Grad: ";
 	expectedGrad->printDate();
 	std::cout << "Credits: " << Student::creditHours << std::endl;
+	std::cout << "____________________________________" << std::endl;
 } // end printStudent
+
+std::string Student::getLastFirst(){
+	std::stringstream ss;
+	ss.clear();
+	ss << Student::lastName << ", " << Student::firstName;
+	return ss.str();
+} // end getLast

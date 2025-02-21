@@ -33,7 +33,8 @@ void testStudent(){
   student->init(studentString);
   student->printStudent();
   std::cout << std::endl;
-  //std::cout << student->getLastFirst();
+  std::cout << student->getLastFirst();
+  std::cout << std::endl;
   delete student;
 } // end testStudent
 

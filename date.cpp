@@ -32,12 +32,16 @@ void Date::init(std::string dateString){
 	ss << sMonth << " " << sDay << " " << sYear;
 	ss >> Date::month >> Date::day >> Date::year;
 
+	if (ss.fail()){
+		std::cout << "failed" << std::endl;
+	} // end if
+	
 	ss.clear();
 	ss.str("");
 
 } // end init
 
 void Date::printDate(){
-	std::string months[13] = {"NULL", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+	std::string months[] = {"NULL", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	std::cout << months[Date::month] << " " << Date::day << ", " << Date::year << std::endl;
 } // end printDate
