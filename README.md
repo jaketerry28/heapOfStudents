@@ -6,9 +6,9 @@
 ### Student
 - Student init(studentString) will take entire string and conduct a parse.
 - Convert credit hour string to int and assign
-- Create Date dob instance
-- Create Date gradDate instance
-- Create Address instance
+- Create Date dob instance on heap
+- Create Date gradDate instance on heap
+- Create Address instance on heap
 
 ### Address
 - Instances of Address will be created on the heap.
