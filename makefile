@@ -21,3 +21,6 @@ run: main
 
 debug: main
 	gdb main
+
+valgrind: main
+	valgrind ./main
