@@ -31,3 +31,29 @@
 	convert the strings into integers and store in month, day, year
 ```
 
+### main
+
+- Loading the student data.
+
+```
+studentPtr vector init in main
+
+void loudStudents(studentPtr vector REFERENCE):
+	open up the students.csv file
+	parse each line of the file for studentStrings
+	create a Student instance (using pointers) on the heap
+	Initialize that instance with the studentString from the csv file
+	append that instance to the vector at the end
+	close the file
+```
+
+- Deleting the student data.
+
+```
+studentPtr vector init in main
+
+void delStudents(stdentPtr vector REFERENCE):
+	for each item in students vector
+		delete item
+```
+
