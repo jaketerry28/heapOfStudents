@@ -56,4 +56,48 @@ void delStudents(stdentPtr vector REFERENCE):
 	for each item in students vector
 		delete item
 ```
+- Printing the student data.
+```
+studentPtr vector init in main
+
+void printStudents(studentPtr vector REFERENCE)
+	for each item in students vector
+		item printStudent();
+
+```
+- Showing students last name and first name.
+
+```
+studentPtr vector init in main
+
+void showStudentNames(studentPtr vector REFERENCE)
+	for each item in students vector
+		print item getLastFirst()
+```
+
+- Finding students by their last name.
+
+```
+
+studentPtr vector init in main
+
+void findStudent(studentPtr vector REFERENCE)
+	init string searchName, lastName
+	init int counter as 1
+	init bool results as false
+	prompt user for last name
+	store input in searchName
+	for each student in the vector
+		stringstream parse for last name
+		store last name in lastName
+		search last name for searchName
+		if lastName contains searchName
+			results is true
+			print counter
+			print student info
+			add one to the counter
+	if results remain false
+		print no results found 	
+```
+
 
