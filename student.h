@@ -21,7 +21,8 @@ class Student{
 		void init(std::string studentString);
 		void printStudent();
 		std::string getLastFirst();
-		int getCreditHours();	
+		int getCreditHours();
+		std::string getLast();	
 
 }; // end class def
 

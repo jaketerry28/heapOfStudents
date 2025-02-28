@@ -76,3 +76,7 @@ std::string Student::getLastFirst(){
 	ss << Student::lastName << ", " << Student::firstName;
 	return ss.str();
 } // end getLast
+
+std::string Student::getLast(){
+	return Student::lastName;
+}

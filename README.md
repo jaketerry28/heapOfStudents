@@ -100,4 +100,17 @@ void findStudent(studentPtr vector REFERENCE)
 		print no results found 	
 ```
 
+- Prompting the menu.
+
+```
+string menu()
+	print 0 to quit
+	print 1 to print all names
+	print 2 to print all data
+	print 3 to find a student
+	initialize string choice
+	store user input in choice
+	return choice
+```
+
 

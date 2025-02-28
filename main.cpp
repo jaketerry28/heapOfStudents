@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 #include "date.h"
 #include "address.h"
 #include "student.h"
@@ -16,26 +17,46 @@ void delStudents(std::vector<Student*>& students);
 void printStudents(std::vector<Student*>& students);
 void showStudentNames(std::vector<Student*>& students);
 void findStudent(std::vector<Student*>& students);
+std::string menu();
 
 int main(){
 
-  //initialize studentPtr type vector called students
-  std::vector<Student*> students;
+  	//initialize studentPtr type vector called students
+  	std::vector<Student*> students;
+  	loadStudents(students);
+
   
-  std::cout << "Hello!" << std::endl;
-  
+  	std::cout << "Hello!" << std::endl;
+
+  	bool keepGoing = true;
+
+  	while (keepGoing){
+	std::string choice = menu();
+	if (choice == "0"){
+		std::cout << "\nQuit\n";
+		keepGoing = false;
+	} // end for
+	else if (choice == "1"){
+		printStudents(students);
+	} // end else if
+	else if (choice == "2"){
+		showStudentNames(students);
+	} // end else if
+	else if (choice == "3"){
+		findStudent(students);
+	} // end else if
+	else {
+		std::cout << "\nPlease enter a valid inputer 0-3: \n";
+	}
+	} // end while 
+	
+  /*		
   testAddress();
   testDate();
   testStudent();
-  
+  */
   std::cout << std::endl;
-  
-  loadStudents(students);
-  //printStudents(students);
-  //showStudentNames(students);
-  findStudent(students);
   delStudents(students);
-
   return 0;
 } // end main
 
@@ -77,6 +98,7 @@ void loadStudents(std::vector<Student*>& students){
 		students.push_back(student);
 	} // end while
 	inFile.close();
+	
 } // end loadStudents()
 
 void delStudents(std::vector<Student*>& students){
@@ -129,3 +151,20 @@ void findStudent(std::vector<Student*>& students){
 	} // end if
 
 } // end findStudent
+
+std::string menu(){
+	
+	std::cout << "\n0) quit\n";
+	std::cout << "1) print all student names\n";
+	std::cout << "2) print all student data\n";
+	std::cout << "3) find a student\n";
+
+	std::cout << "\nPlease choose 0-3: ";
+	
+	std::string choice;
+	
+	getline(std::cin, choice);
+
+	return choice;
+	
+} // end menu
