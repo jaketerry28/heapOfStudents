@@ -46,7 +46,7 @@ int main(){
 		findStudent(students);
 	} // end else if
 	else {
-		std::cout << "\nPlease enter a valid inputer 0-3: \n";
+		std::cout << "\nPlease enter a valid input 0-3: \n";
 	}
 	} // end while 
 	
